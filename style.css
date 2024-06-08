@@ -1,0 +1,110 @@
+body,
+main,
+header,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-image: url('./assets/images/pexels-ollivves-1078983.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 4.4em;
+}
+main section:nth-child(1) {
+  margin-top: 1rem;
+}
+main section:nth-child(1) div {
+  display: flex;
+  justify-content: space-between;
+}
+main section:nth-child(1) h2 {
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+main section:nth-child(1) img {
+  width: 35%;
+  border-radius: 0.5rem;
+}
+
+main section:first-of-type p {
+  width: 50%;
+  font-size: x-large;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: left;
+}
+h2 {
+  font-size: xx-large;
+}
+main section:nth-of-type(2),
+main section:nth-child(1) {
+  padding: 4rem;
+}
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0;
+}
+li {
+  height: 500px;
+  border-radius: 8px;
+}
+li p {
+  display: none;
+}
+li:hover p {
+  display: block;
+}
+li img {
+  width: 100%;
+  border-radius: 8px;
+  height: 370px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+li:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-front,
+.flip-back p {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.flip-back h3 {
+  backface-visibility: hidden;
+}
+.flip-front {
+  z-index: 2;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+button {
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  background-color: dodgerblue;
+  cursor: pointer;
+}
