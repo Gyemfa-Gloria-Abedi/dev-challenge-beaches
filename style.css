@@ -55,6 +55,9 @@ ul {
   gap: 2rem;
   padding: 0;
 }
+ul li:nth-last-child(1) {
+  grid-column: 2 / 3;
+}
 li {
   height: 500px;
   border-radius: 8px;
@@ -68,7 +71,7 @@ li:hover p {
 li img {
   width: 100%;
   border-radius: 8px;
-  height: 370px;
+  height: 23.125rem;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -107,4 +110,26 @@ button {
   font-size: 1.2rem;
   background-color: dodgerblue;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  main section:nth-of-type(2),
+  main section:nth-child(1) {
+    padding: 0.5rem;
+  }
+  main section:nth-child(1) img {
+    width: 35%;
+    border-radius: 0.5rem;
+  }
+
+  main section:first-of-type p {
+    width: 50%;
+    font-size: large;
+    font-weight: 300;
+    line-height: 24px;
+  }
 }
