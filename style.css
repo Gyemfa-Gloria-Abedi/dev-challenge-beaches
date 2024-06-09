@@ -62,12 +62,6 @@ li {
   height: 500px;
   border-radius: 8px;
 }
-li p {
-  display: none;
-}
-li:hover p {
-  display: block;
-}
 li img {
   width: 100%;
   border-radius: 8px;
