@@ -14,32 +14,25 @@ header {
   height: 40rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header h1 {
   font-size: 4.4em;
+  text-align: center;
 }
 main section:nth-child(1) {
   margin-top: 1rem;
-}
-main section:nth-child(1) div {
-  display: flex;
-  justify-content: space-between;
 }
 main section:nth-child(1) h2 {
   margin-bottom: 1.8rem;
   text-align: center;
 }
-main section:nth-child(1) img {
-  width: 35%;
-  border-radius: 0.5rem;
-}
 
 main section:first-of-type p {
-  width: 50%;
   font-size: x-large;
   font-weight: 500;
   line-height: 42px;
-  text-align: left;
+  text-align: center;
 }
 h2 {
   font-size: xx-large;
@@ -60,11 +53,11 @@ ul li:nth-last-child(1) {
 }
 li {
   height: 500px;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 li img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   height: 23.125rem;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -93,18 +86,25 @@ li:hover .flip-inner {
   transform: rotateY(180deg);
   z-index: 1;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   text-align: center;
 }
-button {
-  padding: 1.2rem;
-  border-radius: 0.5rem;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  background-color: dodgerblue;
-  cursor: pointer;
+@media (min-width: 2000px) {
+  header h1 {
+    font-size: 5.4em;
+  }
+  main section:nth-child(1) h2 {
+    margin-bottom: 0;
+    font-size: xxx-large;
+  }
+  main section:first-of-type p {
+    width: 50%;
+    font-size: xxx-large;
+    font-weight: 500;
+    line-height: 58px;
+  }
 }
+
 @media (max-width: 500px) {
   ul {
     grid-template-columns: repeat(2, 1fr);

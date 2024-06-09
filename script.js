@@ -14,20 +14,6 @@ const imageSources = [
   './assets/images/pink-sand.jpg',
 ]
 
-//add div and an image tag for the first section of page
-const pageDescription = () => {
-  const section = document.getElementsByTagName('section')[0]
-  const p = section.getElementsByTagName('p')[0]
-  const imgTag = document.createElement('img')
-  const divContainer = document.createElement('div')
-
-  divContainer.appendChild(imgTag)
-  divContainer.appendChild(p)
-
-  section.appendChild(divContainer)
-  imgTag.src = './assets/images/Person-at-the-beach.png'
-}
-
 //add images to beaches
 const handleBeachImages = () => {
   listItem.forEach((list, index) => {
@@ -75,6 +61,5 @@ const flipImages = () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   handleBeachImages()
-  pageDescription()
   flipImages()
 })
